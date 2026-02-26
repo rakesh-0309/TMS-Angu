@@ -1,0 +1,50 @@
+For listOfTask api 
+
+put these 2 null for whole record for specific record put task_Id in int or task_Title in string 
+Payload:
+{ 
+     task_Id = null
+     task_ Title= null
+}
+
+For createTask api 
+It will create/add a new record in database
+
+Put data as per standerd structure 
+
+Payload 
+
+{
+        
+        task_ Title= "string"
+        task_Discription= "string"
+        DueDate= "date"
+        Status= "string"
+        Remark = "string"
+        CreatedBy = "string"
+        LastupdateBy= "string"
+
+}
+
+For update_Task api
+This api will update the fields which is exist in the database 
+
+Payload 
+{
+        task_ Title= "string"
+        task_Discription= "string"
+        DueDate= "date"
+        Status= "string"
+        Remark = "string"
+        CreatedBy = "string"
+        LastupdateBy= "string"
+}
+
+For deleteTask
+This api will delete the record for a specific task_Id
+
+In payload Put task_Id
+
+{
+     Task_Id= 2
+}
