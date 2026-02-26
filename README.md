@@ -1,58 +1,31 @@
-# TMS-Angu: Task Management System
+#  TMS-Angu – Task Management System
 
-A full-stack web application for efficient task management built with modern technologies and clean architecture principles.
+A full-stack Task Management System built using **Angular (Frontend)** and **ASP.NET Core Web API (Backend)** with **SQL Server** database.
 
-## ?? Table of Contents
-
-- [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-- [API Documentation](#api-documentation)
-- [Database Schema](#database-schema)
-- [Usage Examples](#usage-examples)
-- [Project Architecture](#project-architecture)
-- [Best Practices](#best-practices)
-
----
-
-## ?? Overview
-
-**TMS-Angu** (Task Management System - Angular) is a full-stack application designed to help users create, manage, and track tasks efficiently. The application follows clean architecture principles and implements industry-standard practices for API development, database management, and frontend development.
-
-This project demonstrates:
-- RESTful API design with .NET 8
-- SQL Server stored procedures for data operations
-- Modern frontend frameworks (Angular/React)
-- Clean Code Architecture
-- Professional development practices
+This project demonstrates clean architecture, RESTful API development, and frontend-backend integration following industry best practices.
 
 ---
 
 ## ?? Tech Stack
 
-### Backend
-- **Framework**: .NET 8 Web API
-- **Language**: C#
-- **Database**: SQL Server
-- **ORM/Data Access**: 
-  - Dapper (lightweight, high-performance)
-  - Entity Framework Core (alternative)
-- **Architecture**: Clean Architecture with SOLID principles
-
-### Frontend
-- **Frameworks**: Angular 18+ / React 18+
+### ?? Frontend
+- **Framework**: Angular 18+
 - **Language**: TypeScript
-- **Package Manager**: npm
-- **Styling**: CSS3
-- **Build Tool**: Angular CLI / Webpack
+- **Styling**: HTML5 & CSS3
+- **HTTP Client**: Angular HttpClient
+- **Routing**: Angular Router
 
-### Database
+### ?? Backend
+- **Framework**: ASP.NET Core 8 Web API
+- **Language**: C#
+- **Database Access**: Dapper / Entity Framework Core
+- **Architecture**: Clean Architecture with SOLID Principles
+
+### ?? Database
 - **DBMS**: SQL Server
-- **Stored Procedures**: 4 (Create, Read, Update, Delete)
-- **Tables**: TaskList with comprehensive columns
+- **Data Access**: Stored Procedures
+- **Tables**: TaskList with 10 columns
+- **Procedures**: 4 (Create, Read, Update, Delete)
 
 ---
 
@@ -60,81 +33,78 @@ This project demonstrates:
 
 ```
 TMS-Angu/
+?
 ??? backend/
 ?   ??? Controllers/
-?   ?   ??? TaskController.cs
+?   ?   ??? TaskController.cs          # HTTP request handlers
 ?   ??? Models/
-?   ?   ??? Task.cs
+?   ?   ??? Task.cs                    # Data models
 ?   ??? Services/
-?   ?   ??? TaskService.cs
-?   ??? appsettings.json
-?   ??? Program.cs
-?   ??? TMS.csproj
+?   ?   ??? TaskService.cs             # Business logic
+?   ??? appsettings.json               # Configuration
+?   ??? Program.cs                     # Application startup
+?   ??? TMS.csproj                     # Project file
 ?
 ??? frontend/
 ?   ??? src/
 ?   ?   ??? app/
 ?   ?   ?   ??? task/
-?   ?   ?   ?   ??? task.ts
-?   ?   ?   ?   ??? task.html
-?   ?   ?   ?   ??? task.css
-?   ?   ?   ?   ??? task.service.ts
-?   ?   ?   ??? app.ts
-?   ?   ?   ??? app.html
-?   ?   ?   ??? app.routes.ts
-?   ?   ??? main.ts
-?   ?   ??? styles.css
-?   ?   ??? index.html
-?   ??? angular.json
-?   ??? package.json
-?   ??? tsconfig.json
+?   ?   ?   ?   ??? task.ts            # Component logic
+?   ?   ?   ?   ??? task.html          # Component template
+?   ?   ?   ?   ??? task.css           # Component styles
+?   ?   ?   ?   ??? task.service.ts    # API service
+?   ?   ?   ??? app.ts                 # Root component
+?   ?   ?   ??? app.html               # Root template
+?   ?   ?   ??? app.routes.ts          # Route configuration
+?   ?   ??? main.ts                    # Entry point
+?   ?   ??? styles.css                 # Global styles
+?   ?   ??? index.html                 # HTML template
+?   ??? angular.json                   # Angular config
+?   ??? package.json                   # Dependencies
+?   ??? tsconfig.json                  # TypeScript config
 ?
 ??? database/
-?   ??? API_Documentation.md
-?   ??? table_schema.sql
+?   ??? API_Documentation.md           # Detailed API docs
+?   ??? table_schema.sql               # DB schema & procedures
 ?
-??? README.md
-??? .gitignore
+??? README.md                          # Project documentation
+??? .gitignore                         # Git ignore rules
 ```
 
 ---
 
 ## ? Features
 
-### Core Functionality
-- ? **Create Tasks**: Add new tasks with detailed information
-- ? **Read/List Tasks**: Retrieve all tasks or search by specific criteria
-- ? **Update Tasks**: Modify existing task details
-- ? **Delete Tasks**: Remove tasks from the system
-- ? **Filter & Search**: Find tasks by ID or Title
-
-### Technical Features
-- ?? Stored Procedure Implementation
-- ??? Transaction Management
-- ?? Error Handling & Logging
-- ?? Clean Code Architecture
-- ?? Responsive UI
-- ?? RESTful API Design
+- ? **Create Task** - Add new tasks with detailed information
+- ? **Read/List Tasks** - Retrieve all or search for specific tasks
+- ? **Update Task** - Modify existing task details
+- ? **Delete Task** - Remove tasks from the system
+- ? **Filter & Search** - Find tasks by ID or Title
+- ? **RESTful API** - Professional API design
+- ? **Clean Architecture** - Layered, maintainable code structure
+- ? **Stored Procedures** - Database operations via SQL procedures
+- ? **Error Handling** - Comprehensive exception handling
+- ? **Responsive UI** - User-friendly interface
 
 ---
 
 ## ?? Prerequisites
 
-Before you begin, ensure you have the following installed:
+Before you begin, ensure you have installed:
 
-### Backend
+### Backend Requirements
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [SQL Server 2019+](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or SQL Server Express
+- SQL Server Management Studio (SSMS)
 
-### Frontend
+### Frontend Requirements
 - [Node.js 18+](https://nodejs.org/)
 - [npm 9+](https://www.npmjs.com/)
-- [Angular CLI](https://angular.io/cli) (optional but recommended)
+- Code Editor (VS Code, Visual Studio)
 
-### Tools
-- SQL Server Management Studio (SSMS) - for database setup
-- Visual Studio 2022 or Visual Studio Code
+### Development Tools
 - Git
+- Postman (for API testing - optional)
 
 ---
 
@@ -151,190 +121,106 @@ cd TMS-Angu
 
 1. **Open SQL Server Management Studio (SSMS)**
 
-2. **Create a new database** (optional):
+2. **Create database (optional)**:
    ```sql
    CREATE DATABASE TMS_DB;
    GO
    ```
 
 3. **Run the schema script**:
-   - Open `database/table_schema.sql`
-   - Execute the script in SSMS
-   - This will create:
+   - Open `database/table_schema.sql` in SSMS
+   - Execute the entire script
+   - This creates:
      - `TaskList` table
      - `createTaskList` stored procedure
      - `getTaskList` stored procedure
      - `updateTaskList` stored procedure
      - `delTaskList` stored procedure
 
-### Step 3: Backend Configuration
+### Step 3: Backend Setup
 
-1. **Navigate to backend directory**:
-   ```bash
-   cd backend
-   ```
+```bash
+cd backend
 
-2. **Update connection string** in `appsettings.json`:
-   ```json
-   {
-     "ConnectionStrings": {
-       "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=TMS_DB;Trusted_Connection=true;"
-     }
-   }
-   ```
+# Restore NuGet packages
+dotnet restore
 
-   Replace `YOUR_SERVER_NAME` with your SQL Server instance name (e.g., `localhost` or `.\\SQLEXPRESS`)
+# Update appsettings.json with your connection string
+# Example: "Server=localhost;Database=TMS_DB;Trusted_Connection=true;"
 
-3. **Restore NuGet packages**:
-   ```bash
-   dotnet restore
-   ```
+# Run the backend
+dotnet run
+```
 
-4. **Run the backend**:
-   ```bash
-   dotnet run
-   ```
-
-   The API will be available at `https://localhost:5001` or `http://localhost:5000`
+**Backend will run on:**
+- HTTPS: `https://localhost:5001`
+- HTTP: `http://localhost:5000`
 
 ### Step 4: Frontend Setup
 
-1. **Navigate to frontend directory**:
-   ```bash
-   cd frontend
-   ```
+```bash
+cd frontend
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+# Install npm dependencies
+npm install
 
-3. **Update API base URL** (if needed) in `src/app/task/task.service.ts`:
-   ```typescript
-   private apiUrl = 'https://localhost:5001/api/tasks';
-   ```
+# Update API base URL in src/app/task/task.service.ts (if needed)
+# Default: https://localhost:5001/api/tasks
 
-4. **Start the development server**:
-   ```bash
-   npm start
-   ```
-   or
-   ```bash
-   ng serve
-   ```
+# Start development server
+npm start
+# or
+ng serve
+```
 
-5. **Access the application**:
-   - Open your browser and navigate to `http://localhost:4200`
+**Frontend will run on:** `http://localhost:4200`
 
 ---
 
-## ?? API Documentation
+## ?? API Endpoints
 
-### Base URL
-- **Development**: `https://localhost:5001/api`
-- **Production**: (Configure as per deployment)
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/tasks` | Get all tasks or search |
+| POST | `/api/tasks/create` | Create new task |
+| PUT | `/api/tasks/{id}` | Update existing task |
+| DELETE | `/api/tasks/{id}` | Delete task |
 
-### Endpoints
+### Example Requests
 
-#### 1. Get All Tasks / Search Tasks
-```http
-GET /api/tasks
+**Get All Tasks:**
+```bash
+curl -X GET https://localhost:5001/api/tasks
 ```
 
-**Request Body**:
-```json
-{
-  "task_Id": null,
-  "task_Title": null
-}
+**Create Task:**
+```bash
+curl -X POST https://localhost:5001/api/tasks/create \
+  -H "Content-Type: application/json" \
+  -d '{
+    "task_Title": "Complete Assignment",
+    "task_Discription": "Finish the TMS project",
+    "dueDate": "2024-03-25",
+    "status": "Pending",
+    "remark": "Final submission",
+    "createdBy": "Student",
+    "lastUpdatedBy": "Student"
+  }'
 ```
 
-**Response** (200 OK):
-```json
-[
-  {
-    "task_Id": 1,
-    "task_Title": "Design Database Schema",
-    "task_Discription": "Create database tables and relationships",
-    "dueDate": "2024-03-15T00:00:00",
+**Update Task:**
+```bash
+curl -X PUT https://localhost:5001/api/tasks/1 \
+  -H "Content-Type: application/json" \
+  -d '{
     "status": "Completed",
-    "remark": "Completed ahead of schedule",
-    "createdOn": "2024-01-20T10:30:00",
-    "lastUpdatedDate": "2024-03-10T15:45:00",
-    "createdBy": "Admin",
-    "lastUpdatedBy": "Admin"
-  }
-]
+    "lastUpdatedBy": "Student"
+  }'
 ```
 
-#### 2. Create New Task
-```http
-POST /api/tasks/create
-```
-
-**Request Body**:
-```json
-{
-  "task_Title": "Implement API Endpoints",
-  "task_Discription": "Create REST endpoints for CRUD operations",
-  "dueDate": "2024-03-20",
-  "status": "In Progress",
-  "remark": "High Priority",
-  "createdBy": "John Doe",
-  "lastUpdatedBy": "John Doe"
-}
-```
-
-**Response** (201 Created):
-```json
-{
-  "task_Id": 2,
-  "message": "Task created successfully"
-}
-```
-
-#### 3. Update Task
-```http
-PUT /api/tasks/{id}
-```
-
-**Request Body**:
-```json
-{
-  "task_Title": "Implement API Endpoints - Updated",
-  "status": "Completed",
-  "lastUpdatedBy": "Jane Smith"
-}
-```
-
-**Response** (200 OK):
-```json
-{
-  "task_Id": 2,
-  "task_Title": "Implement API Endpoints - Updated",
-  "status": "Completed",
-  "lastUpdatedDate": "2024-03-18T14:30:00"
-}
-```
-
-#### 4. Delete Task
-```http
-DELETE /api/tasks/{id}
-```
-
-**Request Body**:
-```json
-{
-  "task_Id": 2
-}
-```
-
-**Response** (200 OK):
-```json
-{
-  "result": 1,
-  "message": "Task deleted successfully"
-}
+**Delete Task:**
+```bash
+curl -X DELETE https://localhost:5001/api/tasks/1
 ```
 
 For detailed API documentation, see [API_Documentation.md](database/API_Documentation.md)
@@ -347,11 +233,11 @@ For detailed API documentation, see [API_Documentation.md](database/API_Document
 
 | Column | Type | Constraints | Description |
 |--------|------|-------------|-------------|
-| Task_Id | INT | PRIMARY KEY, IDENTITY | Unique task identifier |
+| Task_Id | INT | PRIMARY KEY, IDENTITY | Auto-incremented task ID |
 | Task_Title | NVARCHAR(250) | NULL | Task title |
-| Task_Discription | NVARCHAR(MAX) | NULL | Detailed task description |
-| DueDate | DATETIME | NULL | Task due date |
-| Status | NVARCHAR(50) | NULL | Current task status |
+| Task_Discription | NVARCHAR(MAX) | NULL | Detailed description |
+| DueDate | DATETIME | NULL | Due date |
+| Status | NVARCHAR(50) | NULL | Task status |
 | Remark | NVARCHAR(500) | NULL | Additional remarks |
 | CreatedOn | DATETIME | DEFAULT GETDATE() | Creation timestamp |
 | LastUpdatedDate | DATETIME | NULL | Last update timestamp |
@@ -360,192 +246,143 @@ For detailed API documentation, see [API_Documentation.md](database/API_Document
 
 ### Stored Procedures
 
-1. **createTaskList**: Inserts a new task record
-2. **getTaskList**: Retrieves tasks with filtering options
-3. **updateTaskList**: Updates existing task records (partial updates supported)
-4. **delTaskList**: Deletes a task by ID
+1. **createTaskList** - Creates new task record
+2. **getTaskList** - Retrieves tasks with filtering
+3. **updateTaskList** - Updates existing task
+4. **delTaskList** - Deletes task by ID
 
-For SQL implementation, see [table_schema.sql](database/table_schema.sql)
-
----
-
-## ?? Usage Examples
-
-### Using Postman or cURL
-
-**Create a Task**:
-```bash
-curl -X POST https://localhost:5001/api/tasks/create \
-  -H "Content-Type: application/json" \
-  -d '{
-    "task_Title": "Complete Assignment",
-    "task_Discription": "Finish the TMS project",
-    "dueDate": "2024-03-25",
-    "status": "Pending",
-    "remark": "Final submission required",
-    "createdBy": "Student",
-    "lastUpdatedBy": "Student"
-  }'
-```
-
-**Get All Tasks**:
-```bash
-curl -X GET https://localhost:5001/api/tasks
-```
-
-**Get Specific Task**:
-```bash
-curl -X GET "https://localhost:5001/api/tasks?task_Id=1"
-```
-
-**Update Task**:
-```bash
-curl -X PUT https://localhost:5001/api/tasks/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-    "status": "Completed",
-    "lastUpdatedBy": "Student"
-  }'
-```
-
-**Delete Task**:
-```bash
-curl -X DELETE https://localhost:5001/api/tasks/1 \
-  -H "Content-Type: application/json" \
-  -d '{"task_Id": 1}'
-```
+See [table_schema.sql](database/table_schema.sql) for implementation details.
 
 ---
 
-## ??? Project Architecture
-
-### Clean Architecture Layers
+## ??? Architecture Overview
 
 ```
 ???????????????????????????????????
-?   Presentation Layer            ?
-?  (Angular/React Components)     ?
+?   Angular Frontend              ?
+?  (Components & Services)        ?
 ???????????????????????????????????
-             ?
+             ? HTTP/REST
 ???????????????????????????????????
-?   Application Layer             ?
-?   (API Controllers & Services)  ?
+?   ASP.NET Core API              ?
+?  (Controllers & Services)       ?
 ???????????????????????????????????
-             ?
+             ? SQL
 ???????????????????????????????????
-?   Domain Layer                  ?
-?   (Models & Business Logic)     ?
-???????????????????????????????????
-             ?
-???????????????????????????????????
-?   Data Access Layer             ?
-?   (Dapper, Repositories)        ?
-???????????????????????????????????
-             ?
-???????????????????????????????????
-?   Database Layer                ?
-?   (SQL Server, Stored Procs)    ?
+?   SQL Server Database           ?
+?  (Tables & Stored Procedures)   ?
 ???????????????????????????????????
 ```
 
-### Design Patterns Implemented
+### Layered Architecture
 
-- **Repository Pattern**: Data access abstraction
-- **Dependency Injection**: Loose coupling
-- **Service Layer**: Business logic separation
-- **DTO Pattern**: Data transfer objects
-- **SOLID Principles**: S, O, L, I, D compliance
+- **Presentation Layer** ? Angular components and UI
+- **API Layer** ? Controllers handling HTTP requests
+- **Business Logic Layer** ? Services with core logic
+- **Data Access Layer** ? Database operations via Dapper
+- **Database Layer** ? SQL Server with stored procedures
 
 ---
 
-## ? Best Practices
+## ? Best Practices Implemented
 
 ### Backend
-- ?? RESTful API conventions
-- ?? Proper HTTP status codes
-- ?? Error handling and validation
+- ?? RESTful API design
+- ?? Dependency Injection
+- ?? Exception handling
 - ?? Stored procedures for data operations
 - ?? Connection pooling
-- ?? Async/await operations
-- ?? Dependency injection
+- ?? Async operations (where applicable)
+- ?? Proper HTTP status codes
 
 ### Frontend
 - ?? Component-based architecture
-- ?? Service-oriented pattern
-- ?? Type safety with TypeScript
+- ?? Service layer for API calls
+- ?? TypeScript for type safety
 - ?? Reactive forms
 - ?? Error handling
 - ?? Environment configuration
 
 ### Database
 - ?? Transaction management
-- ?? Parameterized queries (prevents SQL injection)
-- ?? Proper indexing on primary keys
-- ?? Default values and constraints
-- ?? Error handling in stored procedures
-- ?? COALESCE for partial updates
+- ?? Parameterized queries (SQL injection prevention)
+- ?? Primary keys and constraints
+- ?? Default values
+- ?? Error handling in procedures
 
 ---
 
 ## ?? Troubleshooting
 
-### Common Issues
+**Connection String Error**
+- Verify SQL Server is running
+- Check connection string in `appsettings.json`
+- Example: `"Server=.\\SQLEXPRESS;Database=TMS_DB;Trusted_Connection=true;"`
 
-**Issue**: Connection string error
-- **Solution**: Verify SQL Server is running and connection string is correct in `appsettings.json`
+**Port Already in Use**
+- Change port in `launchSettings.json`
+- Or kill the process using the port
 
-**Issue**: "Port 5001 already in use"
-- **Solution**: Change port in `launchSettings.json` or kill process using the port
+**CORS Errors**
+- Add CORS configuration to `Program.cs`
+- Allow frontend URL (http://localhost:4200)
 
-**Issue**: CORS errors in frontend
-- **Solution**: Configure CORS in backend `Program.cs`:
-  ```csharp
-  builder.Services.AddCors(options =>
-  {
-      options.AddPolicy("AllowFrontend", policy =>
-      {
-          policy.WithOrigins("http://localhost:4200")
-                .AllowAnyMethod()
-                .AllowAnyHeader();
-      });
-  });
-  ```
+**npm Install Issues**
+- Clear npm cache: `npm cache clean --force`
+- Delete `node_modules` and `package-lock.json`
+- Run `npm install` again
 
-**Issue**: npm install fails
-- **Solution**: Clear npm cache and try again:
-  ```bash
-  npm cache clean --force
-  npm install
-  ```
+---
+
+## ?? Documentation
+
+- **API Documentation**: [API_Documentation.md](database/API_Documentation.md)
+- **Database Schema**: [table_schema.sql](database/table_schema.sql)
+
+---
+
+## ?? Project Statistics
+
+- **Lines of Code**: ~2000+
+- **API Endpoints**: 4
+- **Database Tables**: 1
+- **Stored Procedures**: 4
+- **Components**: 5+
+- **Services**: 2+
+
+---
+
+## ?? Academic Assignment
+
+This is an academic assignment project demonstrating:
+- Full-stack application development
+- Clean code architecture
+- Database design and optimization
+- RESTful API development
+- Frontend-backend integration
+- Professional development practices
+
+---
+
+## ?? Project Details
+
+- **Project Name**: TMS-Angu (Task Management System - Angular)
+- **Submission Type**: Academic Assignment
+- **Repository**: [GitHub - TMS-Angu](https://github.com/rakesh-0309/TMS-Angu)
 
 ---
 
 ## ?? License
 
-This project is submitted as an academic assignment. All rights reserved.
+This project is submitted as an academic assignment.
 
 ---
 
-## ????? Author
+**Ready to submit your assignment? Make sure to:**
+- ? Test all CRUD operations
+- ? Verify database connectivity
+- ? Check API endpoints work correctly
+- ? Test frontend functionality
+- ? Review code quality and documentation
 
-Submitted as an Academic Assignment
-
-## ?? Project Submission Details
-
-- **Project Name**: TMS-Angu (Task Management System)
-- **Repository**: [GitHub - TMS-Angu](https://github.com/rakesh-0309/TMS-Angu)
-- **Submission Date**: [Current Date]
-
----
-
-## ?? Support
-
-For issues or questions:
-1. Check the troubleshooting section
-2. Review the API documentation
-3. Examine the database schema
-4. Check console/terminal for error messages
-
----
-
-**Happy Task Managing! ??**
+**Good luck with your submission! ??**
