@@ -2,7 +2,7 @@
 
 A full-stack web application for efficient task management built with modern technologies and clean architecture principles.
 
-## ?? Table of Contents
+##  Table of Contents
 
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
@@ -18,7 +18,7 @@ A full-stack web application for efficient task management built with modern tec
 
 ---
 
-## ?? Overview
+##  Overview
 
 **TMS-Angu** (Task Management System - Angular) is a full-stack application designed to help users create, manage, and track tasks efficiently. The application follows clean architecture principles and implements industry-standard practices for API development, database management, and frontend development.
 
@@ -31,7 +31,7 @@ This project demonstrates:
 
 ---
 
-## ?? Tech Stack
+##  Tech Stack
 
 ### Backend
 - **Framework**: .NET 8 Web API
@@ -56,7 +56,7 @@ This project demonstrates:
 
 ---
 
-## ?? Project Structure
+##  Project Structure
 
 ```
 TMS-Angu/
@@ -99,7 +99,7 @@ TMS-Angu/
 
 ---
 
-## ? Features
+##  Features
 
 ### Core Functionality
 - ? **Create Tasks**: Add new tasks with detailed information
@@ -118,7 +118,7 @@ TMS-Angu/
 
 ---
 
-## ?? Prerequisites
+##  Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -138,7 +138,7 @@ Before you begin, ensure you have the following installed:
 
 ---
 
-## ?? Installation & Setup
+##  Installation & Setup
 
 ### Step 1: Clone the Repository
 
@@ -228,7 +228,7 @@ cd TMS-Angu
 
 ---
 
-## ?? API Documentation
+##  API Documentation
 
 ### Base URL
 - **Development**: `https://localhost:5001/api`
@@ -458,7 +458,7 @@ curl -X DELETE https://localhost:5001/api/tasks/1 \
 
 ---
 
-## ? Best Practices
+##  Best Practices
 
 ### Backend
 - ?? RESTful API conventions
@@ -487,7 +487,7 @@ curl -X DELETE https://localhost:5001/api/tasks/1 \
 
 ---
 
-## ?? Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -520,17 +520,17 @@ curl -X DELETE https://localhost:5001/api/tasks/1 \
 
 ---
 
-## ?? License
+##  License
 
 This project is submitted as an academic assignment. All rights reserved.
 
 ---
 
-## ????? Author
+##  Author
 
 Submitted as an Academic Assignment
 
-## ?? Project Submission Details
+##  Project Submission Details
 
 - **Project Name**: TMS-Angu (Task Management System)
 - **Repository**: [GitHub - TMS-Angu](https://github.com/rakesh-0309/TMS-Angu)
@@ -538,7 +538,7 @@ Submitted as an Academic Assignment
 
 ---
 
-## ?? Support
+##  Support
 
 For issues or questions:
 1. Check the troubleshooting section
@@ -548,4 +548,4 @@ For issues or questions:
 
 ---
 
-**Happy Task Managing! ??**
+**Happy Task Managing! **
